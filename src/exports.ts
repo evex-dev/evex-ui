@@ -3,7 +3,7 @@
  * Entry point for the `@evex/ui` package.
  */
 
-import { PoweredBy } from "./powered-by/index.tsx";
+import { PoweredBy } from "./powered-by/index.ts";
 
 export { PoweredBy };
 
