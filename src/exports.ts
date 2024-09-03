@@ -5,6 +5,10 @@
 
 import { PoweredBy } from "./powered-by/index.ts";
 
-export { PoweredBy };
 
-export default { PoweredBy };
+export { 
+    /**
+    * @description PoweredBy component
+    */
+    PoweredBy
+};
