@@ -1,9 +1,9 @@
-import * as React from 'react';
+import * as React from 'npm:react';
 
 /**
  * @description PoweredBy component
  */
-export function PoweredBy() {
+export function PoweredBy(): React.ReactNode {
     return React.Fragment({
         children: 'Powered by Evex UI',
     })

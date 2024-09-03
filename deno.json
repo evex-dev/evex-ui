@@ -5,7 +5,7 @@
         ".": "./src/exports.ts"
     },
     "imports": {
-        "react": "https://esm.sh/react@18.3.1?target=esnext"
+        "npm:react": "npm:react@18.3.1"
     },
     "compilerOptions": {},
     "unstable": [
