@@ -5,7 +5,8 @@
         ".": "./src/exports.ts"
     },
     "imports": {
-        "npm:react": "npm:react@18.3.1"
+        "npm:react": "npm:react@18.3.1",
+        "npm:@types/react": "npm:@types/react@18.3.5"
     },
     "compilerOptions": {},
     "unstable": [
