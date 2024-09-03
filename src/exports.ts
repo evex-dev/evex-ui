@@ -7,8 +7,5 @@ import { PoweredBy } from "./powered-by/index.ts";
 
 
 export { 
-    /**
-    * @description PoweredBy component
-    */
     PoweredBy
 };
