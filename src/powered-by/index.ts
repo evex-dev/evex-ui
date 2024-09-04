@@ -1,14 +1,12 @@
 /**
  * @module
  */
-import * as React from 'npm:react';
-import type * as ReactTypes from "npm:@types/react";
+import * as React from 'react';
+import type * as ReactTypes from "types/react";
 
 /**
  * @description PoweredBy component
  */
 export function PoweredBy(): ReactTypes.ReactNode {
-    return React.Fragment({
-        children: 'Powered by Evex UI',
-    })
+    return React.createElement('span', { className: 'powered-by' }, 'Powered by Evex UI')
 }
