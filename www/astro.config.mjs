@@ -15,6 +15,7 @@ export default defineConfig({
     resolve: {
       alias: {
         "@styles": "/src/styles",
+        "@evex-ui": "/src/evex-ui",
        "types/react": "../node_modules/@types/react/index.d.ts"
       }
     }
