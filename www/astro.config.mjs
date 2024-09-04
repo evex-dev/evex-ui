@@ -1,21 +1,21 @@
 import { defineConfig } from 'astro/config';
 
 import react from '@astrojs/react';
+import tailwind from "@astrojs/tailwind";
+import sitemap from "@astrojs/sitemap";
+import robotsTxt from "astro-robots-txt";
+import compress from "astro-compress";
 
 // https://astro.build/config
 export default defineConfig({
-  integrations: [react()],
+  integrations: [react(), tailwind(), sitemap(), robotsTxt(), compress()],
   output: 'static',
+  site: "https://ui.evex.land",
   vite: {
     resolve: {
       alias: {
-       "@evex-ui": "../src/exports.ts",
+        "@styles": "/src/styles",
        "types/react": "../node_modules/@types/react/index.d.ts"
-      }
-    },
-    server: {
-      fs: {
-        allow: ['..']
       }
     }
   }

@@ -8,5 +8,5 @@ import type * as ReactTypes from "types/react";
  * @description PoweredBy component
  */
 export function PoweredBy(): ReactTypes.ReactNode {
-    return React.createElement('span', { className: 'powered-by' }, 'Powered by Evex UI')
+    return React.createElement('span', { className: 'text-red-500' }, 'Powered by Evex UI')
 }
