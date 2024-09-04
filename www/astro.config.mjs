@@ -6,4 +6,17 @@ import react from '@astrojs/react';
 export default defineConfig({
   integrations: [react()],
   output: 'static',
+  vite: {
+    resolve: {
+      alias: {
+       "@evex-ui": "../src/exports.ts",
+       "types/react": "../node_modules/@types/react/index.d.ts"
+      }
+    },
+    server: {
+      fs: {
+        allow: ['..']
+      }
+    }
+  }
 });
