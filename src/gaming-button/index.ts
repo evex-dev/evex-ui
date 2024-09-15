@@ -182,7 +182,6 @@ export function GamingButton(options: {
              scale: 1.2;
         }
     }
-    
 `);
 
   return styleWrapper(
