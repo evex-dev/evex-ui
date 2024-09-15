@@ -13,36 +13,56 @@ import { classMerge } from "../_internal/classMerge.ts";
 export function GamingButton(options: {
   children: ReactTypes.ReactNode;
   className?: string;
+  backGroundColor?: string;
+  backGroundColorSubtle?: string;
+  baseColor?: string;
+  baseColorSubtle?: string;
 } & ReactTypes.ButtonHTMLAttributes<"button">): ReactTypes.ReactNode {
+  const resolvedOptions = {
+    baseColor: "blue",
+    baseColorSubtle: "purple",
+    ...options
+  }
+
   const cleanedOptions = {
     ...options,
     children: null,
-    className: null
+    className: null,
+    baseColor: null
   };
 
   const [styleWrapper, styleContent] = useScopedStyle(`
     $scoped {
-         --gaming-button-bg: #000000;
-         --gaming-button-bg-subtle: #1a1818;
-         --gaming-button-highlight: blue;
-         --gaming-button-highlight-subtle: #8484ff;
+         --gaming-button-bg: ${options.backGroundColor ? options.backGroundColor : "#ffffff"};
+         --gaming-button-bg-subtle: ${options.backGroundColor ? options.backGroundColor : "#f1f1f1"};
+         --gaming-button-highlight: ${resolvedOptions.baseColor};
+         --gaming-button-highlight-subtle: ${resolvedOptions.baseColorSubtle};
     }
-     @property --gradient-angle {
+
+    .dark $scoped {
+         --gaming-button-bg: ${options.backGroundColor ? options.backGroundColor : "#000000"};
+         --gaming-button-bg-subtle: ${options.backGroundColor ? options.backGroundColor : "#111122"};
+    }
+
+    @property --gradient-angle {
          syntax: "<angle>";
          initial-value: 0deg;
          inherits: false;
     }
-     @property --gradient-angle-offset {
+    
+    @property --gradient-angle-offset {
          syntax: "<angle>";
          initial-value: 0deg;
          inherits: false;
     }
-     @property --gradient-percent {
+    
+    @property --gradient-percent {
          syntax: "<percentage>";
          initial-value: 5%;
          inherits: false;
     }
-     @property --gradient-shine {
+    
+    @property --gradient-shine {
          syntax: "<color>";
          initial-value: white;
          inherits: false;
