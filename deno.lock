@@ -3,9 +3,11 @@
   "packages": {
     "specifiers": {
       "npm:@types/react@18": "npm:@types/react@18.3.5",
+      "npm:@types/react@18.3.5": "npm:@types/react@18.3.5",
       "npm:react": "npm:react@18.3.1",
       "npm:react@18": "npm:react@18.3.1",
-      "npm:react@18.3.1": "npm:react@18.3.1"
+      "npm:react@18.3.1": "npm:react@18.3.1",
+      "npm:tailwind-merge@2.5.2": "npm:tailwind-merge@2.5.2"
     },
     "npm": {
       "@types/prop-types@15.7.12": {
@@ -38,6 +40,10 @@
         "dependencies": {
           "loose-envify": "loose-envify@1.4.0"
         }
+      },
+      "tailwind-merge@2.5.2": {
+        "integrity": "sha512-kjEBm+pvD+6eAwzJL2Bi+02/9LFLal1Gs61+QB7HvTfQQ0aXwC5LGT8PEt1gS0CWKktKe6ysPTAy3cBC5MeiIg==",
+        "dependencies": {}
       }
     }
   },

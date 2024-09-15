@@ -1,5 +1,23 @@
 ---
-import "@styles/global.css";
-import { PoweredBy } from "@evex-ui";
+import Layout from "@layouts/layout.astro";
+import { PoweredBy, BackGrid, RichText, GamingButton } from "@evex-ui";
 ---
-<PoweredBy client:load />
+<Layout title="Home">
+    <div class="flex flex-col">
+        <BackGrid>
+            <div class="w-screen h-screen flex flex-col items-center justify-center">
+                <div class="h-1/2 flex flex-col items-start justify-center">
+                    <RichText className="text-6xl">Build Rich Web UI.</RichText>
+                    <div class="text-sm text-neutral-400 px-2">
+                        <p>Evex UI is the best choice for building </p>
+                        <p>The next generation of modern, beautiful websites. </p>
+                    </div>
+                    <div class="mt-5 flex justify-center w-full">
+                        <GamingButton className="px-10">Get Started</GamingButton>
+                    </div>
+                </div>
+                <PoweredBy className="mt-5 text-sm" word="Backed" icon="/favicon.png" name="Evex Developers" />
+            </div>
+        </BackGrid>
+    </div>
+</Layout>

@@ -5,7 +5,8 @@
     "jsx": "react-jsx",
     "jsxImportSource": "react",
     "paths": {
-			"@styles/*": ["./src/styles/*"],
+      "@styles/*": ["./src/styles/*"],
+      "@layouts/*": ["./src/layouts/*"],
       "@evex-ui": ["./src/evex-ui/index.ts"],
       "types/react": ["../node_modules/@types/react/index.d.ts"]
     }

@@ -4,8 +4,9 @@
  */
 
 import { PoweredBy } from "./powered-by/index.ts";
+import { NoScrollbar } from "./no-scrollbar/index.ts";
+import { BackGrid } from "./back-grid/index.ts";
+import { RichText } from './rich-text/index.ts';
+import { GamingButton } from './gaming-button/index.ts';
 
-
-export { 
-    PoweredBy
-};
+export { BackGrid, NoScrollbar, PoweredBy, RichText, GamingButton };

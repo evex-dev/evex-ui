@@ -1,0 +1,48 @@
+---
+import { NoScrollbar } from "@evex-ui";
+import "@styles/global.css";
+
+interface Props {
+    title: string;
+}
+
+const {
+    title
+} = Astro.props;
+
+const description = "Evex UI is beautiful web ui component written by react and tailwindcss, unocss.";
+
+const origin = Astro.url.origin;
+
+---
+<!DOCTYPE html>
+<html class="dark" lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width" />
+        <link rel="icon" type="image/svg+xml" href="/favicon.png" />
+        <title>Evex UI - {title}</title>
+        <meta name="description" content={description} />
+        <meta name="generator" content={Astro.generator} />
+        <meta name="keywords" content="evex,evex dev,evex ui" />
+        <meta name="creator" content="@EdamAme-x" />
+        <meta name="publisher" content="@EdamAme-x" />
+        <meta name="robots" content="index, follow" />
+        <meta property="og:title" content={`Evex UI - ${title}`} />
+        <meta property="og:description" content={description} />
+        <meta property="og:url" content={origin} />
+        <meta property="og:site_name" content={title} />
+        <meta property="og:locale" content="en_US" />
+        <meta property="og:image" content={`${origin}/favicon.png`} />
+        <meta property="og:type" content="website" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content={`Evex UI - ${title}`} />
+        <meta name="twitter:description" content={description} />
+        <meta name="twitter:image" content={`${origin}/favicon.png`} />
+    </head>
+    <body class="min-w-full min-h-screen">
+        <NoScrollbar isGlobal>
+            <slot />
+        </NoScrollbar>
+    </body>
+</html>
