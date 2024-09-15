@@ -17,7 +17,7 @@ export function RichText(options: {
     "span",
     {
       className: classMerge(
-        "sans bg-gradient-to-b from-neutral-800 to-neutral-500 dark:from-white dark:to-neutral-500 bg-clip-text text-transparent leading-[1.6] ml-1 font-medium",
+        "bg-gradient-to-b from-neutral-800 to-neutral-500 dark:from-white dark:to-neutral-500 bg-clip-text text-transparent leading-[1.6] ml-1 font-medium",
         options.className,
       ),
     },

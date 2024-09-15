@@ -32,7 +32,7 @@ export function PoweredBy(options: {
     },
     React.createElement("span", {
       className:
-        "sans leading-[1.6] text-neutral-600 dark:text-neutral-300 font-normal",
+        "leading-[1.6] text-neutral-600 dark:text-neutral-300 font-normal",
     }, `${options.word || "Powered"} by`),
     React.createElement(
       "span",
@@ -58,7 +58,7 @@ export function PoweredBy(options: {
         "span",
         {
           className:
-            "sans bg-gradient-to-br from-neutral-800 to-neutral-500 dark:from-white dark:to-neutral-500 bg-clip-text text-transparent leading-[1.6] ml-1 font-medium",
+            "bg-gradient-to-br from-neutral-800 to-neutral-500 dark:from-white dark:to-neutral-500 bg-clip-text text-transparent leading-[1.6] ml-1 font-medium",
         },
         options.name,
       ),
