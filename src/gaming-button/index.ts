@@ -15,12 +15,12 @@ export function GamingButton(options: {
   className?: string;
   backGroundColor?: string;
   backGroundColorSubtle?: string;
-  baseButtonColor?: string;
-  baseButtonColorSubtle?: string;
+  baseColor?: string;
+  baseColorSubtle?: string;
 } & ReactTypes.ButtonHTMLAttributes<"button">): ReactTypes.ReactNode {
   const resolvedOptions = {
-    baseButtonColor: "blue",
-    baseButtonColorSubtle: "skyblue",
+    baseColor: "blue",
+    baseColorSubtle: "skyblue",
     ...options
   }
 
@@ -30,16 +30,16 @@ export function GamingButton(options: {
     className: undefined,
     backGroundColor: undefined,
     backGroundColorSubtle: undefined,
-    baseButtonColor: undefined,
-    baseButtonColorSubtle: undefined,
+    baseColor: undefined,
+    baseColorSubtle: undefined,
   };
 
   const [styleWrapper, styleContent] = useScopedStyle(`
     $scoped {
          --gaming-button-bg: ${options.backGroundColor ? options.backGroundColor : "#ffffff"};
          --gaming-button-bg-subtle: ${options.backGroundColor ? options.backGroundColor : "#f1f1f1"};
-         --gaming-button-highlight: ${resolvedOptions.baseButtonColor};
-         --gaming-button-highlight-subtle: ${resolvedOptions.baseButtonColorSubtle};
+         --gaming-button-highlight: ${resolvedOptions.baseColor};
+         --gaming-button-highlight-subtle: ${resolvedOptions.baseColorSubtle};
     }
 
     .dark $scoped {
@@ -86,6 +86,28 @@ export function GamingButton(options: {
          border-radius: 360px;
          background: linear-gradient(var(--gaming-button-bg), var(--gaming-button-bg)) padding-box, conic-gradient(from calc(var(--gradient-angle) - var(--gradient-angle-offset)), transparent, var(--gaming-button-highlight) var(--gradient-percent), var(--gradient-shine) calc(var(--gradient-percent) * 2), var(--gaming-button-highlight) calc(var(--gradient-percent) * 3), transparent calc(var(--gradient-percent) * 4)) border-box;
          box-shadow: inset 0 0 0 1px var(--gaming-button-bg-subtle);
+    }
+
+    $scoped .gaming-button {
+         color: rgb(54, 54, 54);
+         border: rgba(25, 25, 25, 0.2);
+         padding-top: 0.75rem;
+         padding-bottom: 0.75rem; 
+         padding-left: 1.25rem;
+         padding-right: 1.25rem;
+    }
+
+    .dark $scoped .gaming-button {
+         color: rgb(212, 212, 212);
+         border: rgba(255, 255, 255, 0.2);
+    }
+
+    $scoped .gaming-button:hover {
+         color: rgb(75, 75, 75);
+    }
+
+    .dark $scoped .gaming-button:hover {
+         color: rgb(250 250 250);
     }
     
     $scoped .gaming-button::before, $scoped .gaming-button::after, $scoped .gaming-button span::before {
@@ -190,7 +212,7 @@ export function GamingButton(options: {
   return styleWrapper(
     React.createElement("button", {
       ...cleanedOptions,
-      className: classMerge("gaming-button text-neutral-300 hover:text-neutral-50 border border-white/20 py-3 px-5", options.className)
+      className: classMerge("gaming-button", options.className)
     }, React.createElement("span", null, options.children)),
     styleContent,
   );

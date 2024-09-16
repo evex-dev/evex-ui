@@ -5,6 +5,7 @@
 import * as React from "react";
 import type * as ReactTypes from "types/react";
 import { classMerge } from "../_internal/classMerge.ts";
+import { useScopedStyle } from "../_internal/useScopedStyle.ts";
 
 /**
  * @description RichText component
@@ -13,14 +14,32 @@ export function RichText(options: {
   className?: string;
   children: ReactTypes.ReactNode;
 }): ReactTypes.ReactNode {
-  return React.createElement(
-    "span",
-    {
-      className: classMerge(
-        "bg-gradient-to-b from-neutral-800 to-neutral-500 dark:from-white dark:to-neutral-500 bg-clip-text text-transparent leading-[1.6] ml-1 font-medium",
-        options.className,
-      ),
-    },
-    options.children
+  const [styleWrapper, styleContent] = useScopedStyle(`
+    $scoped .rich-text {
+      display: inline-block;
+      color: transparent;
+      background-image: linear-gradient(to bottom, #1f2937, rgb(115, 115, 115));
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+      line-height: 1.6;
+      margin-left: 0.25rem;
+      font-weight: 500;
+    }
+
+    .dark $scoped .rich-text {
+      background-image: linear-gradient(to bottom, #ffffff, rgb(115, 115, 115));
+    }
+  `);
+
+  return styleWrapper(
+    React.createElement(
+      "span",
+      {
+        className: classMerge("rich-text", options.className),
+      },
+      options.children
+    ),
+    styleContent
   );
 }
