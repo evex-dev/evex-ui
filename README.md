@@ -5,7 +5,7 @@ Evex UI is beautiful web ui component written by react and tailwindcss, unocss.
 ---
 
 <p align="center">Develop now</p>
-<p align="center">Documentation: [ui.evex.land](https://ui.evex.land)</p>
+<p align="center">Documentation: <a href="https://ui.evex.land">ui.evex.land</a></p>
 
 ---
 
