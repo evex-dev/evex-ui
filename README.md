@@ -1,6 +1,6 @@
 # Evex UI
 
-Evex UI is beautiful web ui component written by react and tailwindcss, unocss.
+Evex UI is beautiful web ui component written by react.
 
 ---
 
