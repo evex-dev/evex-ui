@@ -15,28 +15,31 @@ export function GamingButton(options: {
   className?: string;
   backGroundColor?: string;
   backGroundColorSubtle?: string;
-  baseColor?: string;
-  baseColorSubtle?: string;
+  baseButtonColor?: string;
+  baseButtonColorSubtle?: string;
 } & ReactTypes.ButtonHTMLAttributes<"button">): ReactTypes.ReactNode {
   const resolvedOptions = {
-    baseColor: "blue",
-    baseColorSubtle: "purple",
+    baseButtonColor: "blue",
+    baseButtonColorSubtle: "skyblue",
     ...options
   }
 
   const cleanedOptions = {
     ...options,
-    children: null,
-    className: null,
-    baseColor: null
+    children: undefined,
+    className: undefined,
+    backGroundColor: undefined,
+    backGroundColorSubtle: undefined,
+    baseButtonColor: undefined,
+    baseButtonColorSubtle: undefined,
   };
 
   const [styleWrapper, styleContent] = useScopedStyle(`
     $scoped {
          --gaming-button-bg: ${options.backGroundColor ? options.backGroundColor : "#ffffff"};
          --gaming-button-bg-subtle: ${options.backGroundColor ? options.backGroundColor : "#f1f1f1"};
-         --gaming-button-highlight: ${resolvedOptions.baseColor};
-         --gaming-button-highlight-subtle: ${resolvedOptions.baseColorSubtle};
+         --gaming-button-highlight: ${resolvedOptions.baseButtonColor};
+         --gaming-button-highlight-subtle: ${resolvedOptions.baseButtonColorSubtle};
     }
 
     .dark $scoped {
