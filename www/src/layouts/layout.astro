@@ -1,6 +1,7 @@
 ---
 import { NoScrollbar } from "@evex-ui";
-import "@styles/global.css";
+import "@/styles/global.css";
+import Header from "./header.astro";
 
 interface Props {
     title: string;
@@ -42,6 +43,7 @@ const origin = Astro.url.origin;
     </head>
     <body class="min-w-full min-h-screen">
         <NoScrollbar isGlobal>
+            <Header />
             <slot />
         </NoScrollbar>
     </body>

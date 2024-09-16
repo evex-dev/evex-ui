@@ -8,7 +8,9 @@ import compress from "astro-compress";
 
 // https://astro.build/config
 export default defineConfig({
-  integrations: [react(), tailwind(), sitemap(), robotsTxt(), compress()],
+  integrations: [react(), tailwind({
+    applyBaseStyles: false,
+  }), sitemap(), robotsTxt(), compress()],
   output: "static",
   site: "https://ui.evex.land",
   vite: {

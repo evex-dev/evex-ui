@@ -24,7 +24,7 @@ export function GamingButton(options: {
     ...options
   }
 
-  const cleanedOptions = {
+  const cleanedOptions = Object.fromEntries(Object.entries({
     ...options,
     children: undefined,
     className: undefined,
@@ -32,7 +32,7 @@ export function GamingButton(options: {
     backGroundColorSubtle: undefined,
     baseColor: undefined,
     baseColorSubtle: undefined,
-  };
+  }).filter(([_, value]) => !!value));
 
   const [styleWrapper, styleContent] = useScopedStyle(`
     $scoped {
