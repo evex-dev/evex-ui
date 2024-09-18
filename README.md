@@ -15,7 +15,6 @@ Evex UI is beautiful web ui component written by react.
 - Easy to use 🎉
 - Super Beautiful 🔥
 - Support All Runtime ❄
-- TailwindCSS & UnoCSS 🌈
 
 ## Installation
 
