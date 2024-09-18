@@ -17,7 +17,7 @@ export function NoScrollbar(options: {
     ...options,
   };
 
-  const [styleWrapper, styleContent] = useScopedStyle(`
+  const [styleWrapper] = useScopedStyle(`
   ${resolvedOptions.isGlobal ? "" : "$scoped"} * {
     scroll-behavior: smooth;
   }
@@ -30,7 +30,7 @@ export function NoScrollbar(options: {
   ${resolvedOptions.isGlobal ? "" : "$scoped"} *::-webkit-scrollbar {
     display: none;
   }
-  `);
+`);
 
-  return styleWrapper(options.children, styleContent);
+  return styleWrapper(options.children);
 }

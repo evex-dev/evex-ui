@@ -23,7 +23,7 @@ export function PoweredBy(options: {
     ...options,
   };
 
-  const [styleWrapper, styleContent] = useScopedStyle(`
+  const [styleWrapper] = useScopedStyle(`
     $scoped .container {
       display: flex;
       align-items: center;
@@ -89,7 +89,7 @@ export function PoweredBy(options: {
         className: classMerge("container", options.className),
       },
       React.createElement("span", {
-        className: "word"
+        className: "word",
       }, `${options.word || "Powered"} by`),
       React.createElement(
         "span",
@@ -118,6 +118,5 @@ export function PoweredBy(options: {
         ),
       ),
     ),
-    styleContent
   );
 }

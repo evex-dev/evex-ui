@@ -27,7 +27,7 @@ export function BackGrid(options: {
     ...options,
   };
 
-  const [styleWrapper, styleContent] = useScopedStyle(`
+  const [styleWrapper] = useScopedStyle(`
     $scoped .backgrid {
         --back-grid-color: ${resolvedOptions.backgridColor ? "" : "#00000011"};
         --back-grid-line-between: ${resolvedOptions.backgridLineBetween};
@@ -53,6 +53,5 @@ export function BackGrid(options: {
     React.createElement("div", {
       className: classMerge("backgrid", options.className),
     }, options.children),
-    styleContent,
   );
 }

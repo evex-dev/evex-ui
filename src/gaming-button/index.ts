@@ -10,41 +10,53 @@ import { classMerge } from "../_internal/classMerge.ts";
 /**
  * @description GamingButton component
  */
-export function GamingButton(options: {
-  children: ReactTypes.ReactNode;
-  className?: string;
-  backGroundColor?: string;
-  backGroundColorSubtle?: string;
-  baseColor?: string;
-  baseColorSubtle?: string;
-} & ReactTypes.ButtonHTMLAttributes<"button">): ReactTypes.ReactNode {
+export function GamingButton(
+  options: {
+    children: ReactTypes.ReactNode;
+    className?: string;
+    backGroundColor?: string;
+    backGroundColorSubtle?: string;
+    baseColor?: string;
+    baseColorSubtle?: string;
+  } & ReactTypes.ButtonHTMLAttributes<"button">,
+): ReactTypes.ReactNode {
   const resolvedOptions = {
     baseColor: "blue",
     baseColorSubtle: "skyblue",
-    ...options
-  }
-
-  const cleanedOptions = Object.fromEntries(Object.entries({
     ...options,
-    children: undefined,
-    className: undefined,
-    backGroundColor: undefined,
-    backGroundColorSubtle: undefined,
-    baseColor: undefined,
-    baseColorSubtle: undefined,
-  }).filter(([_, value]) => !!value));
+  };
 
-  const [styleWrapper, styleContent] = useScopedStyle(`
+  const cleanedOptions = Object.fromEntries(
+    Object.entries({
+      ...options,
+      children: undefined,
+      className: undefined,
+      backGroundColor: undefined,
+      backGroundColorSubtle: undefined,
+      baseColor: undefined,
+      baseColorSubtle: undefined,
+    }).filter(([_, value]) => !!value),
+  );
+
+  const [styleWrapper] = useScopedStyle(`
     $scoped {
-         --gaming-button-bg: ${options.backGroundColor ? options.backGroundColor : "#ffffff"};
-         --gaming-button-bg-subtle: ${options.backGroundColor ? options.backGroundColor : "#f1f1f1"};
+         --gaming-button-bg: ${
+    options.backGroundColor ? options.backGroundColor : "#ffffff"
+  };
+         --gaming-button-bg-subtle: ${
+    options.backGroundColor ? options.backGroundColor : "#f1f1f1"
+  };
          --gaming-button-highlight: ${resolvedOptions.baseColor};
          --gaming-button-highlight-subtle: ${resolvedOptions.baseColorSubtle};
     }
 
     .dark $scoped {
-         --gaming-button-bg: ${options.backGroundColor ? options.backGroundColor : "#000000"};
-         --gaming-button-bg-subtle: ${options.backGroundColor ? options.backGroundColor : "#111122"};
+         --gaming-button-bg: ${
+    options.backGroundColor ? options.backGroundColor : "#000000"
+  };
+         --gaming-button-bg-subtle: ${
+    options.backGroundColor ? options.backGroundColor : "#111122"
+  };
     }
 
     @property --gradient-angle {
@@ -212,8 +224,7 @@ export function GamingButton(options: {
   return styleWrapper(
     React.createElement("button", {
       ...cleanedOptions,
-      className: classMerge("gaming-button", options.className)
+      className: classMerge("gaming-button", options.className),
     }, React.createElement("span", null, options.children)),
-    styleContent,
   );
 }

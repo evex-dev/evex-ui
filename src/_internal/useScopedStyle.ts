@@ -5,7 +5,7 @@ export function useScopedStyle(
   style: string,
 ): [
   (...children: ReactTypes.ReactNode[]) => ReactTypes.ReactNode,
-  ReactTypes.ReactNode,
+  string,
 ] {
   const key = "evex-ui-" + React.useId().replace(/:/g, "");
 
@@ -13,15 +13,20 @@ export function useScopedStyle(
 
   return [
     (...children: ReactTypes.ReactNode[]) =>
-      React.createElement("div", {
-        id: key,
-        style: {
-          display: "contents",
+      React.createElement(
+        "div",
+        {
+          id: key,
+          style: {
+            display: "contents",
+          },
         },
-      }, ...children),
-    React.createElement("style", {
-      id: key + "-style",
-      dangerouslySetInnerHTML: { __html: scopedStyle },
-    }),
+        ...children,
+        React.createElement("style", {
+          id: key + "-style",
+          dangerouslySetInnerHTML: { __html: scopedStyle },
+        }),
+      ),
+    key,
   ];
 }

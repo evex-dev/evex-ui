@@ -14,7 +14,7 @@ export function RichText(options: {
   className?: string;
   children: ReactTypes.ReactNode;
 }): ReactTypes.ReactNode {
-  const [styleWrapper, styleContent] = useScopedStyle(`
+  const [styleWrapper] = useScopedStyle(`
     $scoped .rich-text {
       display: inline-block;
       color: transparent;
@@ -38,8 +38,7 @@ export function RichText(options: {
       {
         className: classMerge("rich-text", options.className),
       },
-      options.children
+      options.children,
     ),
-    styleContent
   );
 }
