@@ -1,7 +1,7 @@
 # Evex UI
 
 Evex UI is beautiful web ui component written by react.  
-It is not necessary to use a processor such as Tailwind.
+It is not necessary to use a processor such as **Tailwind**.
 
 ---
 
