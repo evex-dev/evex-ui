@@ -5,6 +5,8 @@ It is not necessary to use a processor such as **Tailwind**.
 
 Everything is written in **Vanilla CSS**.
 
+<!-- MAGC UI AND MORE X -->
+
 ---
 
 <p align="center">Develop now</p>
