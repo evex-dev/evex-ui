@@ -14,6 +14,7 @@ export function GamingButton(
   options: {
     children: ReactTypes.ReactNode;
     className?: string;
+    duration?: number;
     backGroundColor?: string;
     backGroundColorSubtle?: string;
     baseColor?: string;
@@ -21,6 +22,7 @@ export function GamingButton(
   } & ReactTypes.ButtonHTMLAttributes<"button">,
 ): ReactTypes.ReactNode {
   const resolvedOptions = {
+    duration: 3000,
     baseColor: "blue",
     baseColorSubtle: "skyblue",
     ...options,
@@ -31,6 +33,7 @@ export function GamingButton(
       ...options,
       children: undefined,
       className: undefined,
+      duration: undefined,
       backGroundColor: undefined,
       backGroundColorSubtle: undefined,
       baseColor: undefined,
@@ -84,8 +87,8 @@ export function GamingButton(
     }
     
     $scoped .gaming-button {
-         --animation: gradient-angle linear infinite;
-         --duration: 3s;
+         --animation: gradient-angle ease-in-out infinite;
+         --duration: ${resolvedOptions.duration.toString()}ms;
          --shadow-size: 2px;
          isolation: isolate;
          position: relative;
@@ -107,6 +110,7 @@ export function GamingButton(
          padding-bottom: 0.75rem; 
          padding-left: 1.25rem;
          padding-right: 1.25rem;
+         transition: color 0.3s ease-in-out;
     }
 
     .dark $scoped .gaming-button {
@@ -116,6 +120,7 @@ export function GamingButton(
 
     $scoped .gaming-button:hover {
          color: rgb(75, 75, 75);
+         transition: color 0.3s ease-in-out;
     }
 
     .dark $scoped .gaming-button:hover {
@@ -195,7 +200,7 @@ export function GamingButton(
          animation-play-state: running;
     }
     
-    $scoped .gaming-button:is(:hover, :focus-visible) span::before {
+    $scoped .gaming-button span::before {
          opacity: 1;
     }
     

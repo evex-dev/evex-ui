@@ -2,6 +2,7 @@
   "version": "3",
   "packages": {
     "specifiers": {
+      "npm:@types/node": "npm:@types/node@18.16.19",
       "npm:@types/react@18": "npm:@types/react@18.3.5",
       "npm:@types/react@18.3.5": "npm:@types/react@18.3.5",
       "npm:react": "npm:react@18.3.1",
@@ -10,6 +11,10 @@
       "npm:tailwind-merge@2.5.2": "npm:tailwind-merge@2.5.2"
     },
     "npm": {
+      "@types/node@18.16.19": {
+        "integrity": "sha512-IXl7o+R9iti9eBW4Wg2hx1xQDig183jj7YLn8F7udNceyfkbn1ZxmzZXuak20gR40D7pIkIY1kYGx5VIGbaHKA==",
+        "dependencies": {}
+      },
       "@types/prop-types@15.7.12": {
         "integrity": "sha512-5zvhXYtRNRluoE/jAp4GVsSduVUzNWKkOZrCDBWYtE7biZywwdC2AcEzg+cSMLFRfVgeAFqpfNabiPjxFddV1Q==",
         "dependencies": {}
