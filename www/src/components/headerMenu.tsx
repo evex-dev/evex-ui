@@ -33,6 +33,7 @@ export function HeaderMenu() {
           >
             <img
               src="/icons/github.svg"
+              className="dark:invert"
               width="18"
               height="18"
               alt="github"
@@ -41,6 +42,7 @@ export function HeaderMenu() {
           <a href="https://x.com/amex2189" target="_blank">
             <img
               src="/icons/x.svg"
+              className="dark:invert"
               width="18"
               height="18"
               alt="x"
@@ -49,6 +51,7 @@ export function HeaderMenu() {
           <a href="https://evex.land" target="_blank">
             <img
               src="/icons/discord.svg"
+              className="dark:invert"
               width="18"
               height="18"
               alt="discord"
