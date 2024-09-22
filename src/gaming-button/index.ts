@@ -22,7 +22,7 @@ export function GamingButton(
   } & ReactTypes.ButtonHTMLAttributes<"button">,
 ): ReactTypes.ReactNode {
   const resolvedOptions = {
-    duration: 3000,
+    duration: 5000,
     baseColor: "blue",
     baseColorSubtle: "skyblue",
     ...options,
