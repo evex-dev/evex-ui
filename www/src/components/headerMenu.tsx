@@ -12,13 +12,16 @@ export function HeaderMenu() {
         <div className="flex flex-col justify-center items-start gap-y-3">
           <div>
             <RichText>
-              Documentation
+              Docs
             </RichText>
           </div>
           <div>
             <RichText>
               Components
             </RichText>
+          </div>
+          <div>
+            <RichText> Template </RichText>
           </div>
           <div>
             <RichText>
