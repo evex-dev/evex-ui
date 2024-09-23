@@ -4,6 +4,7 @@
 @tailwind utilities;
 
 body {
+    overflow-x: hidden;
     font-family: 'Inter', sans-serif;
 }
 
