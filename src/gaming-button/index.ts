@@ -1,6 +1,6 @@
 /**
  * @module
- * GamingButton component
+ * Gaming Button component
  */
 import * as React from "react";
 import type * as ReactTypes from "types/react";
@@ -8,7 +8,7 @@ import { useScopedStyle } from "../_internal/useScopedStyle.ts";
 import { classMerge } from "../_internal/classMerge.ts";
 
 /**
- * @description GamingButton component
+ * @description Gaming Button component
  */
 export function GamingButton(
   options: {

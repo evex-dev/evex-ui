@@ -1,6 +1,6 @@
 /**
  * @module
- * PoweredBy component
+ * Powered By component
  */
 import * as React from "react";
 import type * as ReactTypes from "types/react";
@@ -8,7 +8,7 @@ import { classMerge } from "../_internal/classMerge.ts";
 import { useScopedStyle } from "../_internal/useScopedStyle.ts";
 
 /**
- * @description PoweredBy component
+ * @description Powered By component
  */
 export function PoweredBy(options: {
   className?: string;

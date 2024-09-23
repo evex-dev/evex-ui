@@ -1,6 +1,6 @@
 /**
  * @module
- * RichText component
+ * Rich Text component
  */
 import * as React from "react";
 import type * as ReactTypes from "types/react";
@@ -8,7 +8,7 @@ import { classMerge } from "../_internal/classMerge.ts";
 import { useScopedStyle } from "../_internal/useScopedStyle.ts";
 
 /**
- * @description RichText component
+ * @description Rich Text component
  */
 export function RichText(options: {
   className?: string;

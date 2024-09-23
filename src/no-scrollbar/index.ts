@@ -1,12 +1,12 @@
 /**
  * @module
- * NoScrollbar component
+ * No Scrollbar component
  */
 import type * as ReactTypes from "types/react";
 import { useScopedStyle } from "../_internal/useScopedStyle.ts";
 
 /**
- * @description NoScrollbar component
+ * @description No Scrollbar component
  */
 export function NoScrollbar(options: {
   children: ReactTypes.ReactNode;

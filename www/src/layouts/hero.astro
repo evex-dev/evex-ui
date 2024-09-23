@@ -1,9 +1,16 @@
 ---
 import { HeroAnnounce } from "@/components/heroAnnounce";
-import { Spotlight } from "@/components/ui/spotlight";
+import { Spotlight, Spotlight2 } from "@/components/ui/spotlight";
 import { PoweredBy, RichText, GamingButton } from "@evex-ui";
 ---
-<Spotlight className="top-20 left-0 sm:top-0 md:left-40 md:-top-20" fill="#ffffff77" />
+<Spotlight
+  className="left-[5dvw] top-[75dvh] bottom-0"
+  fill="#5CE1E699"
+/>
+<Spotlight2
+  className="left-[95dvw] top-[75dvh] bottom-0 transform scale-x-[-1]"
+  fill="#6158B199"
+/>
 <div class="flex flex-col w-screen h-dvh">
   <div class="w-screen h-screen flex flex-col items-center justify-center">
     <div class="h-1/2 flex flex-col items-start justify-center">
@@ -19,7 +26,9 @@ import { PoweredBy, RichText, GamingButton } from "@evex-ui";
         <p>The next generation of modern, beautiful websites.</p>
       </div>
       <div class="mt-10 flex justify-center w-full">
-        <GamingButton className="!px-24">Get Started</GamingButton>
+        <GamingButton className="!px-24" baseColor="#5ce0e5"
+          >Get Started</GamingButton
+        >
       </div>
     </div>
     <a href="https://evex.land" target="_blank">
