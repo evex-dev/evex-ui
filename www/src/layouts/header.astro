@@ -10,7 +10,7 @@ import { HeaderMenu } from "@/components/headerMenu.tsx";
     <img src="/logo.png" class="h-12 dark:hidden" alt="Evex Logo" />
     <img src="/logo-dark.png" class="h-12 hidden dark:block" alt="Evex Logo" />
   </div>
-  <div class="hidden md:flex justify-center w-full">
+  <div class="hidden lg:flex justify-center w-full">
     <div class="flex justify-center items-center gap-x-10">
       <div>
         <RichText> Docs </RichText>
@@ -27,7 +27,7 @@ import { HeaderMenu } from "@/components/headerMenu.tsx";
     </div>
   </div>
   <div
-    class="hidden md:flex justify-center items-center gap-x-4 min-w-[200px] h-full"
+    class="hidden lg:flex justify-center items-center gap-x-4 min-w-[200px] h-full"
   >
     <a href="https://github.com/evex-dev/evex-ui" target="_blank">
       <div
@@ -61,7 +61,7 @@ import { HeaderMenu } from "@/components/headerMenu.tsx";
       />
     </a>
   </div>
-  <div class="flex md:hidden justify-center items-center">
+  <div class="flex lg:hidden justify-center items-center">
     <HeaderMenu client:load />
   </div>
 </header>
