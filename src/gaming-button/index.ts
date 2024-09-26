@@ -44,10 +44,10 @@ export function GamingButton(
   const [styleWrapper] = useScopedStyle(`
     $scoped {
          --gaming-button-bg: ${
-    options.backGroundColor ? options.backGroundColor : "#ffffff"
+    options.backGroundColor || "#ffffff"
   };
          --gaming-button-bg-subtle: ${
-    options.backGroundColor ? options.backGroundColor : "#f1f1f1"
+    options.backGroundColor || "#f1f1f1"
   };
          --gaming-button-highlight: ${resolvedOptions.baseColor};
          --gaming-button-highlight-subtle: ${resolvedOptions.baseColorSubtle};
@@ -55,10 +55,10 @@ export function GamingButton(
 
     .dark $scoped {
          --gaming-button-bg: ${
-    options.backGroundColor ? options.backGroundColor : "#000000"
+    options.backGroundColor || "#000000"
   };
          --gaming-button-bg-subtle: ${
-    options.backGroundColor ? options.backGroundColor : "#111122"
+    options.backGroundColor || "#111122"
   };
     }
 

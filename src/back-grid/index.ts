@@ -11,7 +11,7 @@ import { classMerge } from "../_internal/classMerge.ts";
  * @description Back Grid component
  */
 export function BackGrid(options: {
-  children: ReactTypes.ReactNode;
+  children?: ReactTypes.ReactNode;
   className?: string;
   backgridColor?: string;
   backgridLineBetween?: string;
@@ -29,7 +29,7 @@ export function BackGrid(options: {
 
   const [styleWrapper] = useScopedStyle(`
     $scoped .backgrid {
-        --back-grid-color: ${resolvedOptions.backgridColor ? "" : "#00000011"};
+        --back-grid-color: ${resolvedOptions.backgridColor || "#00000011"};
         --back-grid-line-between: ${resolvedOptions.backgridLineBetween};
         --back-grid-mask-rotate: ${resolvedOptions.backgridMaskRotate};
         --back-grid-mask-power: ${resolvedOptions.backgridMaskPower};
@@ -37,7 +37,7 @@ export function BackGrid(options: {
     }
 
     .dark $scoped .backgrid {
-        ${resolvedOptions.backgridColor ? "" : "--back-grid-color: #ffffff12;"}
+        ${resolvedOptions.backgridColor || "--back-grid-color: #ffffff12;"}
     }
 
     $scoped .backgrid {
