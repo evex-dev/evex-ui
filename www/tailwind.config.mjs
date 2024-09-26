@@ -1,3 +1,5 @@
+import { fade } from 'astro/virtual-modules/transitions.js';
+
 /** @type {import('tailwindcss').Config} */
 export default {
   darkMode: "class",
@@ -56,6 +58,7 @@ export default {
       animation: {
         spotlight: "spotlight 2s ease .75s 1 forwards",
         spotlight2: "spotlight2 2s ease .75s 1 forwards",
+        fadein: "fadein 2.25s ease .75s 1 forwards",
       },
       keyframes: {
         spotlight: {
@@ -76,6 +79,14 @@ export default {
           "100%": {
             opacity: 1,
             transform: "translate(-50%,-42%) scale(1)",
+          },
+        },
+        fadein: {
+          from: {
+            opacity: 0,
+          },
+          to: {
+            opacity: 1,
           },
         },
       },
