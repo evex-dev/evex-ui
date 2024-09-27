@@ -4,7 +4,6 @@ import react from "@astrojs/react";
 import tailwind from "@astrojs/tailwind";
 import sitemap from "@astrojs/sitemap";
 import robotsTxt from "astro-robots-txt";
-import compress from "astro-compress";
 
 // https://astro.build/config
 export default defineConfig({
@@ -15,7 +14,6 @@ export default defineConfig({
     }),
     sitemap(),
     robotsTxt(),
-    compress(),
   ],
   output: "static",
   site: "https://ui.evex.land",
