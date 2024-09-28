@@ -58,7 +58,7 @@ export default {
       animation: {
         spotlight: "spotlight 2s ease .75s 1 forwards",
         spotlight2: "spotlight2 2s ease .75s 1 forwards",
-        fadein: "fadein 2.25s ease .75s 1 forwards",
+        fadein: "fadein 2.5s ease .75s 1 forwards",
       },
       keyframes: {
         spotlight: {

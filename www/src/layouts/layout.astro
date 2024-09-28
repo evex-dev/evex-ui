@@ -21,7 +21,7 @@ const origin = Astro.url.origin;
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width" />
-        <link rel="icon" type="image/svg+xml" href="/favicon.png" />
+        <link rel="icon" href="/favicon.png" />
         <title>Evex UI - {title}</title>
         <meta name="description" content={description} />
         <meta name="generator" content={Astro.generator} />
@@ -34,12 +34,12 @@ const origin = Astro.url.origin;
         <meta property="og:url" content={origin} />
         <meta property="og:site_name" content={title} />
         <meta property="og:locale" content="en_US" />
-        <meta property="og:image" content={`${origin}/favicon.png`} />
+        <meta property="og:image" content={`${origin}/assets/background.png`} />
         <meta property="og:type" content="website" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content={`Evex UI - ${title}`} />
         <meta name="twitter:description" content={description} />
-        <meta name="twitter:image" content={`${origin}/favicon.png`} />
+        <meta name="twitter:image" content={`${origin}/assets/background.png`} />
         <script is:inline>
 	        const getThemePreference = () => {
 	        	if (typeof localStorage !== 'undefined' && localStorage.getItem('theme')) {
