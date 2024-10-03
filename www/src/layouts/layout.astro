@@ -40,24 +40,6 @@ const origin = Astro.url.origin;
         <meta name="twitter:title" content={`Evex UI - ${title}`} />
         <meta name="twitter:description" content={description} />
         <meta name="twitter:image" content={`${origin}/assets/background.png`} />
-        <script is:inline>
-	        const getThemePreference = () => {
-	        	if (typeof localStorage !== 'undefined' && localStorage.getItem('theme')) {
-	        		return localStorage.getItem('theme');
-	        	}
-	        	return 'dark';
-	        };
-	        const isDark = getThemePreference() === 'dark';
-	        document.documentElement.classList[isDark ? 'add' : 'remove']('dark');
-        
-	        if (typeof localStorage !== 'undefined') {
-	        	const observer = new MutationObserver(() => {
-	        		const isDark = document.documentElement.classList.contains('dark');
-	        		localStorage.setItem('theme', isDark ? 'dark' : 'light');
-	        	});
-	        	observer.observe(document.documentElement, { attributes: true, attributeFilter: ['class'] });
-	        }
-        </script>
     </head>
     <body class="max-w-dvw min-h-dvh">
         <NoScrollbar isGlobal>
